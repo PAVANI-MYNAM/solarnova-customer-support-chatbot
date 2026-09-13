@@ -38,55 +38,8 @@ This project addresses that problem by creating an intelligent chatbot that can:
 ## 🧠 Solution Overview
 
 The chatbot uses a **Retrieval-Augmented Generation architecture** instead of relying only on the language model’s pre-trained knowledge.
+<img width="1223" height="1286" alt="image" src="https://github.com/user-attachments/assets/fe30b041-57fd-4d80-ac3e-e166212a8f27" />
 
-```text
-                    ┌──────────────────────┐
-                    │   Business PDF       │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │  Document Loading    │
-                    │     and Chunking     │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Hugging Face         │
-                    │ Embedding Model      │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Qdrant Vector Store  │
-                    └──────────┬───────────┘
-                               │
-User Question ────────────────►│
-                               ▼
-                    ┌──────────────────────┐
-                    │ Semantic Retrieval   │
-                    │ Top-K Relevant Chunks│
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Prompt Construction  │
-                    │ + Chat History       │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Groq LLM             │
-                    │ Response Generation  │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Streamlit Chat UI    │
-                    └──────────────────────┘
-```
-
----
 
 ## ✨ Key Features
 
